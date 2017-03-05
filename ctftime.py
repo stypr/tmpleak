@@ -26,9 +26,10 @@ for i in z:
 		r = os.popen('ls -al "'+j+i+'" 2>&1').read()
 		s = os.popen('ls -al "'+j+i.lower()+'" 2>&1').read()
 		e = "No such file or directory"
-		if (e not in r) and (e not in s):
-			sys.stdout.flush( )
+		if (e not in r) or (e not in s):
+			sys.stdout.flush()
 			if e in r:
-				print("\n[Found: %s]\n%s"%(j+i,r))
+				print("\n[Found: %s]\n%s"%(j+i.lower(),s))
 			else:
-				print("\n[Found: %s]\n%s"%(j+i.lower(),r))
+				print("\n[Found: %s]\n%s"%(j+i,r))
+print 
