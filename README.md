@@ -14,7 +14,7 @@ Developed by Harold Kim (root@stypr.com)
 
 Very simple, just type the following command on your bash!
 
-`$ curl -s https://ctf.stypr.com/ctftime/ctftime.py | python -u`
+`$ curl -s https://raw.githubusercontent.com/stypr/tmpleak/master/ctftime.py | python -u`
 
 ### About
 
