@@ -16,11 +16,11 @@ m=len(z)
 t=40
 c=lambda x:' '*(t-len(x))
 for i in z:
-    n+=1;f='\r[%s/%s] Checking %s...%s'%(n,m,i,c(i));sys.stdout.flush();sys.stdout.write(f)
-    for j in q:
-        a='ls -al "%s" 2>&1';b='\n[Found: %s]\n%s';e='No such file or directory';r=os.popen(a%(j+i)).read();s=os.popen(a%(j+i.lower())).read()
-        if e not in r or e not in s:
-            sys.stdout.flush()
-            if e in r:print(b%(j+i.lower(),s))
-            else:print(b%(j+i,r))
+ n+=1;f='\r[%s/%s] Checking %s...%s'%(n,m,i,c(i));sys.stdout.flush();sys.stdout.write(f)
+ for j in q:
+  a='ls -al "%s" 2>&1';b='\n[Found: %s]\n%s';e='No such file or directory';r=os.popen(a%(j+i)).read();s=os.popen(a%(j+i.lower())).read()
+  if e not in r or e not in s:
+   sys.stdout.flush()
+   if e in r:print(b%(j+i.lower(),s))
+   else:print(b%(j+i,r))
 print
