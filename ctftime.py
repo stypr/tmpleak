@@ -1,4 +1,4 @@
-#!-*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 """ Made by stypr (https://harold.kim/) """
 u='utf-8'
 import os,sys
